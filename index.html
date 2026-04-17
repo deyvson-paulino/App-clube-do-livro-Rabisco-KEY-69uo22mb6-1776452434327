@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>App Clube do Livro</title>
+
+<link rel="manifest" href="manifest.json">
+<script defer src="script.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #333;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: linear-gradient(135deg, #ff2d55, #ff6b6b);
+  padding: 30px 15px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease;
+}
+
+.header img {
+  width: 80px!important;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: clamp(20px, 5vw, 28px);
+}
+
+.header p {
+  font-size: clamp(12px, 3vw, 16px);
+  opacity: 0.9;
+}
+
+/* ================= BOTÃO ================= */
+.btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #fff;
+  color: #ff2d55;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: bold;
+  border: none;
+  font-size: clamp(12px, 3vw, 16px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 15px;
+}
+
+/* ================= CARDS ================= */
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ================= TEXTOS ================= */
+h2 {
+  margin-bottom: 10px;
+  font-size: clamp(14px, 3.5vw, 18px);
+}
+
+p, li {
+  font-size: clamp(12px, 3vw, 14px);
+  line-height: 1.4;
+}
+
+/* ================= SCREENS ================= */
+.screens {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+  scroll-snap-type: x mandatory;
+}
+
+.screens img {
+  width: 120px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: 0.3s;
+}
+
+.screens img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* ================= RESPONSIVIDADE EXTRA ================= */
+
+/* Tablets */
+@media (min-width: 768px) {
+  .header {
+    padding: 50px 20px;
+  }
+
+  .header img {
+    width: 100px;
+  }
+
+  .screens img {
+    width: 150px;
+  }
+}
+
+/* Telas grandes */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <img src="icon-512.png">
+  <h1>Clube do Livro</h1>
+  <p>Biblioteca de Livros online</p>
+
+  <button id="installButton" class="btn" hidden>Instalar App</button>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📱 Sobre o App</h2>
+    <p>
+      Audiolivros para ouvir quando e onde quiser. Independência financeira,
+      construir riqueza e muito mais. Leve sua biblioteca inteira no bolso.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>⭐ Avaliações</h2>
+    <p>⭐ 4.5 • Mais de 100 milhões de downloads</p>
+  </div>
+
+  <div class="card">
+    <h2>📸 Screenshots</h2>
+    <div class="screens">
+      <img src="screens/Sem título (7).png">
+      <img src="screens/Sem título (8).png">
+      <img src="screens/Sem título (9).png">
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 Rabisco Digital</p>
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('Service Worker registrado!'))
+    .catch(err => console.log('Erro no Service Worker:', err));
+}
+</script>
+
+</body>
+</html>

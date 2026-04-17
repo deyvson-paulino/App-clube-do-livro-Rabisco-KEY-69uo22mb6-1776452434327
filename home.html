@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página com Vídeo de Fundo</title>
+  <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* escurece um pouco o vídeo */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 250px;
+    }
+    
+    .btn-login {
+      padding: 15px 30px;
+      font-size: 1.1em;
+      color: #4caf50;
+      background: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.1em;
+      color: white;
+      background: #4caf50;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #348A39;
+    }
+    
+    .convidado {
+      color: white;
+      padding: 15px 30px;
+    }
+    
+    .convidado:hover {
+      color: white;
+    }
+    
+    img {
+      width: 200px;
+      position: absolute;
+      top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .btn, .link-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .btn-login, .link-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      img {
+        width: 200px;
+        position: absolute;
+        top: 70px;
+      }
+      
+      .button-container {
+        margin-top: 350px;
+      }
+    }
+
+
+  </style>
+  
+  <style>
+  ._2pY0E {
+    text-decoration: none;
+    color: white;
+  }
+ .icon {
+  width: 20px;
+  height: 20px;
+  stroke: #333;
+  fill: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease, fill 0.2s ease;
+  margin-bottom: -5px;
+}
+
+.icon:hover {
+  fill: #2196f3; /* Azul ao passar o mouse */
+  transform: scale(1.1);
+}
+
+#boas-vindas {
+  color: white;
+  text-align: center;
+}
+</style>
+</head>
+  <body>
+ 
+  <!-- Vídeo de fundo -->
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="lv_0_20250419223329.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  <!-- Camada de conteúdo sobre o vídeo -->
+  <div class="overlay">
+       
+<div id="boas-vindas">Olá!
+<p>Seja bem vindo(a).</p>
+</div>
+
+    <!--<a class="_2pY0E" id="programme-tv" itemprop="item" href="ott iptv/index.html"><span itemprop="name">
+              
+     <svg class="icon tv-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
+  <!-- TV body -->
+  <!--<rect x="3" y="6" width="18" height="12" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>-->
+  
+  <!-- TV base -->
+  <!--<line x1="8" y1="20" x2="16" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>-->
+  
+  <!-- Play icon in the center -->
+ <!-- <polygon points="10 10 15 12 10 14" fill="currentColor"/>
+</svg>
+Streaming TV</span></a>-->
+
+    <!--<img src="https://img.freepik.com/vetores-gratis/vetor-de-gradiente-de-logotipo-colorido-de-passaro_343694-1365.jpg?ga=GA1.1.2012856495.1736021971&semt=ais_hybrid&w=740" alt="Rabisco Academy">-->
+    <div class="button-container">
+      <a href="login.html" class="link-btn">
+      <button class="btn-login">Entrar</button>
+      </a>
+      <a href="https://deyvson-paulino.github.io/paginas-venda-KEY-1q3jtegky-1776445828498/" class="link-btn" target="_blank">
+      <button class="btn">Criar Conta</button>
+      </a>
+      <!--<a href="inicio.html" class="convidado">Continuar como Convidado</a>-->
+    </div>
+  </div>
+
+</body>
+</html>

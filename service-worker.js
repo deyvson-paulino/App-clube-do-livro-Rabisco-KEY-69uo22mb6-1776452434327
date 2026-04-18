@@ -1,11 +1,13 @@
 const CACHE_NAME = "clube-do-livro-rabisco-v1";
+
+const BASE = "/App-clube-do-livro-Rabisco-KEY-69uo22mb6-1776452434327/";
 const urlsToCache = [
     "index.html",
      "script.js",
      "manifest.json",
     "home.html",
     "login.html",
-    "pai-rico-pai-pobre V 1.6.html",
+    "pai-rico-pai-pobre-V-1.6.html",
     "screens/Sem título (7).png",
     "screens/Sem título (8).png",
     "screens/Sem título (9).png",

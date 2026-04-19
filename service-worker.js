@@ -1,4 +1,4 @@
-const CACHE_NAME = "clube-do-livro-rabisco-v1";
+const CACHE_NAME = "clube-do-livro-rabisco-cache-v1";
 
 const BASE = "/App-clube-do-livro-Rabisco-KEY-69uo22mb6-1776452434327/";
 const urlsToCache = [
